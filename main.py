@@ -1,7 +1,6 @@
 import networkx as nx
 import matplotlib.pyplot as plt
-import maxpend as mx
-import simple
+import functions
 import os
 
 grafo = nx.Graph() #Creación del Grafo
@@ -51,12 +50,12 @@ end_nodes = {"Z", "L"}
 os.system('cls')
 
 print("Escalada Simple:")
-path, weight = simple.escalada(grafo, start_node, end_nodes)
+path, weight = functions.escalada(grafo, start_node, end_nodes)
 print("Camino encontrado:", path)
 print("Peso total del camino:", weight)
 
 print("\nEscalada por Máxima Pendiente:")
-path, weight = mx.escalada_por_maxima_pendiente(grafo, start_node, end_nodes)
+path, weight = functions.escalada_por_maxima_pendiente(grafo, start_node, end_nodes)
 print("Camino encontrado:", path)
 print("Peso total del camino:", weight)
 
